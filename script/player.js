@@ -37,7 +37,10 @@ class Player {
         this.audio.addEventListener('ended', () => this.changeSong(() => {this.incrementCurId()}))
         this.progressbar.addEventListener('mousedown', () => {this.pauseProgressListening()})
         this.progressbar.addEventListener('mouseup', () => {this.setProgress(); this.continueProgressListening()})
+        this.progressbar.addEventListener('touchstart', () => {this.pauseProgressListening()})
+        this.progressbar.addEventListener('touchend', () => {this.setProgress(); this.continueProgressListening()})
         this.volume.addEventListener('mouseup', () => {this.setVolume()})
+        this.volume.addEventListener('touchend', () => {this.setVolume()})
         this.init()
     }
 

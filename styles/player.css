@@ -36,7 +36,7 @@
   width: 100%;
 }
 .player-wrapper .player .interactive .volume__div {
-  width: 40%;
+  width: 60%;
   margin: 5px auto;
   display: flex;
   justify-content: start;
@@ -53,6 +53,7 @@
   min-height: 30px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 .player-wrapper .player .interactive .volume__div .volume__wrapper #volume {
   width: 100%;
