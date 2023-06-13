@@ -1,0 +1,36 @@
+@import url('defaults.css');
+
+.pictures {
+    filter: drop-shadow(10px 10px 16px black) contrast(1.3);
+    position: relative;
+    padding: 30px;
+    z-index: 100;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: auto;
+        width: 100%;
+        min-width: 300px;
+        max-width: 500px;
+        border-radius: 50%;
+        z-index: 1000;
+    }
+    .element {
+        position: absolute;
+        background: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        width: 50px;
+        height: 0;/*
+        border-radius: 1px;
+        border-top: 75px solid white;
+        border-right: 40px solid transparent;
+        border-left: 40px solid transparent;*/
+        transform-origin: top left;
+        transition: .25s;
+    }
+}

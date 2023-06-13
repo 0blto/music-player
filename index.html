@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/defaults.css">
+    <link rel="stylesheet" href="./styles/player.css">
+    <link rel="stylesheet" href="./styles/pictures.css">
+    <link rel="shortcut icon" href="./resources/favicon.ico" type="image/x-icon">
+    <title>.crybae</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="pictures"></div>
+        <div class="player-wrapper">
+            <div class="player">
+                <div class="title"></div>
+                <div class="author"></div>
+                <div class="interactive">
+                    <div class="progressbar__wrapper">
+                        <input type="range" name="progressbar" id="progressbar" min="0" max="1" step="0.01" value="0">
+                    </div>
+                    <div class="buttons">
+                        <img id="prev" src="./resources/buttons/prev.svg">
+                        <img id="play" src="./resources/buttons/play.svg">
+                        <img id="next" src="./resources/buttons/next.svg">
+                    </div>
+                    <div class="volume__div">
+                        <img id="vol" src="./resources/buttons/muted.svg">
+                        <div class="volume__wrapper">
+                            <input type="range" name="volume" id="volume" min="0" max="1" step="0.01" value="0.5">
+                        </div> 
+                        <img id="vol" src="./resources/buttons/vol.svg">
+                    </div>
+                    <div class="equalizer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/math.js"></script>
+    <script src="./script/colors.js"></script>
+    <script src="./script/storage.js"></script>
+    <script src="./script/player.js"></script>
+    <script src="./script/main.js"></script>
+</body> 
+</html>

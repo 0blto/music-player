@@ -1,0 +1,158 @@
+@import url('defaults.css'); 
+
+.player-wrapper {
+    border-radius: 30px;
+    background: white;
+    max-width: 480px;
+    width: 100%;
+    padding: 25px;
+    z-index: 1000;
+    box-shadow: 0 0 5px 2px var(--dark);
+    .player {
+        width: 100%;
+        padding: 0;
+        .title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            color: black;
+            text-align: center;
+        }
+        .author {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: var(--gray);
+            text-align: center;
+        }
+        .interactive {
+            .progressbar__wrapper {
+                width: 100%;
+                margin: 5px auto;
+                #progressbar {
+                    width: 100%;
+                }
+            }
+            .volume__div {
+                width: 40%;
+                margin: 5px auto;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                height: 20px;
+                img {
+                    width: 20px;
+                    height: auto;
+                }
+                .volume__wrapper {
+                    margin: 0 10px;
+                    width: 100%;
+                    min-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    #volume {
+                        width: 100%;
+                    }
+                }
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 50%;
+                height: 30px;
+                margin: 5px auto;
+                img {
+                    width: 30px;
+                    height: auto;
+                }
+            }  
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 5px;
+            cursor: pointer;
+            background: var(--gray);
+            border-radius: 5px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            border: none;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: var(--dark);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -2px;
+            box-shadow: 1px 1px 5px var(--dark);
+        }
+        input[type=range]::-moz-range-track {
+            height: 5px;
+            cursor: pointer;
+            background: var(--gray);
+            border-radius: 5px;
+        }
+        input[type=range]::-moz-range-thumb {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: var(--dark);
+            cursor: pointer;
+            box-shadow: 1px 1px 5px var(--dark);
+        }
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: var(--gray);
+        }
+        input[type=range]::-ms-fill-lower {
+            background: var(--gray);
+            border-radius: 5px;
+        }
+        input[type=range]::-ms-fill-upper {
+            background: var(--gray);
+            border-radius: 5px;
+        }
+        input[type=range]::-ms-thumb {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: var(--dark);
+            cursor: pointer;
+            box-shadow: 1px 1px 5px var(--dark);
+        }
+        input[type=range]:focus::-ms-fill-lower {
+            background: var(--gray);
+        }
+        input[type=range]:focus::-ms-fill-upper {
+            background: var(--gray);
+        }
+        .equalizer {
+            position: relative;
+            margin: auto;
+            width: 50%;
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            div {
+                display: inline-block;
+                background: var(--dark);
+                width: 5px;
+                margin: 0 1px;
+                border-radius: 5px;
+            }
+        }
+    } 
+}
+
+
+
