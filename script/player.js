@@ -61,22 +61,7 @@ class Player {
         window.requestAnimationFrame(() => {this.visualize()})
         let array = new Uint8Array(this.analyzer.frequencyBinCount)
         this.analyzer.getByteFrequencyData(array)
-        //const trap = this.pictDiv.querySelector('.album__photo')
-        
-        for (let i = 0; i < this.elementsSize; i++) {
-            /*let item = array[i]
-            this.elements[i].borderRadius = `${array[i]/2}px`
-            this.elements[i].style.transform = `rotateZ(${i * (360 / this.analyzer.frequencyBinCount) + 180 + this.audio.currentTime * 100}deg) translate(-50%, ${clamp(item + i * 7 * this.isPlaying, trap.clientWidth/7, trap.clientWidth*this.audio.currentTime)}px)`
-            */
-           this.elements[i].style.height = Math.max(0, array[(i+10)*2]/10 || 0) + 'px'
-        }
-        /*
-        const trap = this.pictDiv.querySelector('.album__photo')
-        trap.style.boxShadow = `${array[1]+100}px ${array[2]+100}px ${array[3]+1000}px ${array[4]+100}px ${this.domainColor},` +
-            `${-array[6]-100}px ${-array[7]-100}px ${array[8]+1000}px ${array[9]+100}px ${this.domainColor},` +
-            `${array[12]+100}px ${-array[13]-100}px ${array[14]+1000}px ${array[15]+100}px yellow,` + 
-            `${-array[16]-100}px ${array[17]+100}px ${array[18]+1000}px ${array[19]+100}px yellow`*/
-        
+        for (let i = 0; i < this.elementsSize; i++) this.elements[i].style.height = Math.max(0, array[(i+10)*2]/10 || 0) + 'px'
     }
 
     fillVisualizer() {
@@ -97,10 +82,10 @@ class Player {
         this.titleDOM.innerHTML = this.musicList[this.curId].name
         this.authorDOM.innerHTML = this.musicList[this.curId].author
         this.pictDiv.innerHTML = `<img class="album__photo" src="${this.musicList[this.curId].img}">`
-        setTimeout(() => {
+        document.querySelector('.album__photo').onload = () => {
             this.domainColor = getDominantColor(document.querySelector('.album__photo'))
             this.wrapper.style.backgroundColor = this.domainColor !== '#000000' ? this.domainColor : '#808080'
-        }, 30)
+        }
     }
 
     init() {this.audio.src = this.musicList[this.curId].music;this.changeTitle()}
